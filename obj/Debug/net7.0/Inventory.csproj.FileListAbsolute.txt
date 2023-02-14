@@ -1,7 +1,6 @@
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/appsettings.Development.json
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/appsettings.json
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/Inventory.staticwebassets.runtime.json
-/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/app.db
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/Inventory
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/Inventory.deps.json
 /home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/bin/Debug/net7.0/Inventory.runtimeconfig.json
