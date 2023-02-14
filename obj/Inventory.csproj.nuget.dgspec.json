@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Inventory.csproj": {}
+  },
+  "projects": {
+    "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Inventory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Inventory.csproj",
+        "projectName": "Inventory",
+        "projectPath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Inventory.csproj",
+        "packagesPath": "/home/juan/.nuget/packages/",
+        "outputPath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/juan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/juan/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
