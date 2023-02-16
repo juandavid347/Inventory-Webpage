@@ -60,6 +60,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -98,6 +118,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmVuZG9ycy9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmVuZG9ycy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmVuZG9ycy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmVuZG9ycy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVmVuZG9ycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/_ViewImports.cshtml]
