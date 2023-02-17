@@ -1,0 +1,57 @@
+@page
+@model Inventory.Pages.Company.IndexModel
+
+@{
+    ViewData["Title"] = "Company Info";
+}
+
+<h2>Company Information</h2>
+
+@{
+    if (!Model.CompanyInfo.Any())
+    {
+        <p>
+            <a asp-page="SetInfo">Set Information</a>
+        </p>
+    }
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyInfo[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyInfo[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyInfo[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyInfo[0].Address)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CompanyInfo) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -60,6 +60,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Company/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcGFueS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcGFueS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Company/SetInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29tcGFueS9TZXRJbmZvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
