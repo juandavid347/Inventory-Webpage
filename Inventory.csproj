@@ -22,6 +22,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.3" />
+    <PackageReference Include="MigraDocCore.DocumentObjectModel" Version="1.3.47" />
+    <PackageReference Include="MigraDocCore.Rendering" Version="1.3.47" />
   </ItemGroup>
 
 </Project>

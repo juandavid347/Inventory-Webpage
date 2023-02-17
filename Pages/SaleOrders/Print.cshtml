@@ -1,0 +1,17 @@
+@page
+@model Inventory.Pages.SaleOrders.PrintModel
+
+@{
+    ViewData["Title"] = "Print";
+}
+
+<h1>Print</h1>
+
+<div>
+    <h4>SaleOrder</h4>
+    <iframe src="@Model.filename" width="100%" height="400px"></iframe>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SaleOrder?.SaleID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

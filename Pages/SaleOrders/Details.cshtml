@@ -1,0 +1,51 @@
+@page
+@model Inventory.Pages.SaleOrders.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SaleOrder</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SaleOrder.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaleOrder.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SaleOrder.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaleOrder.Customer.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SaleOrder.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaleOrder.Status)
+        </dd>
+        @foreach (var item in Model.saleItems){
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(modelItem => item.Item)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.Item.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(modelItem => item.Quantity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.SaleOrder?.SaleID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

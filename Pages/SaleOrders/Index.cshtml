@@ -1,0 +1,49 @@
+@page
+@model Inventory.Pages.SaleOrders.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleOrder[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleOrder[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleOrder[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SaleOrder) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SaleID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SaleID">Details</a> |
+                <a asp-page="./Print" asp-route-id="@item.SaleID">Print</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SaleID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
