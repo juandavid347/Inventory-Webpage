@@ -16,4 +16,6 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Inventory.Models.SaleOrder> SaleOrder { get; set; } = default!;
     public DbSet<Inventory.Models.SaleItems> SaleItems { get; set; } = default!;
     public DbSet<Inventory.Models.CompanyInfo> CompanyInfo { get; set; } = default!;
+    public DbSet<Inventory.Models.PurchaseOrder> PurchaseOrder { get; set; } = default!;
+    public DbSet<Inventory.Models.PurchaseItems> PurchaseItems { get; set; } = default!;
 }

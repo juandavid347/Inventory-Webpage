@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VAgTqYbkvZJu/i8pzHNET6s+rdib+20NRW94uKTgOco=",
+  "Hash": "JU3xfEioc80F25SiXPVbKowoutxTaFHFDyzC9bUA4CA=",
   "Source": "Inventory",
   "BasePath": "_content/Inventory",
   "Mode": "Default",
@@ -2089,6 +2089,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Identity": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/wwwroot/SalesOrder20230217083921.pdf",
+      "SourceId": "Inventory",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/wwwroot/",
+      "BasePath": "_content/Inventory",
+      "RelativePath": "SalesOrder20230217083921.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/SalesOrder20230217083921.pdf"
     }
   ]
 }

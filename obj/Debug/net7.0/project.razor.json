@@ -18690,6 +18690,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Delete.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Shared/_LoginPartial.cshtml",
       "TargetPath": "Pages\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
@@ -18697,6 +18702,11 @@
     {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/SaleOrders/Details.cshtml",
       "TargetPath": "Pages\\SaleOrders\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Print.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Print.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18760,6 +18770,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Details.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Company/SetInfo.cshtml",
       "TargetPath": "Pages\\Company\\SetInfo.cshtml",
       "FileKind": "mvc"
@@ -18805,6 +18820,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Edit.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/SaleOrders/Create.cshtml",
       "TargetPath": "Pages\\SaleOrders\\Create.cshtml",
       "FileKind": "mvc"
@@ -18822,6 +18842,11 @@
     {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Customers/Delete.cshtml",
       "TargetPath": "Pages\\Customers\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Index.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -18847,6 +18872,11 @@
     {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Vendors/Index.cshtml",
       "TargetPath": "Pages\\Vendors\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/PurchaseOrders/Create.cshtml",
+      "TargetPath": "Pages\\PurchaseOrders\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
