@@ -1,0 +1,72 @@
+@page
+@model Inventory.Pages.History.IndexModel
+
+@{
+    ViewData["Title"] = "History";
+}
+
+<h4>Sales</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Sales[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sales[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sales[0].Status)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Sales) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<h4>Purchases</h4>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchases[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchases[0].Vendor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchases[0].Status)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Purchases) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

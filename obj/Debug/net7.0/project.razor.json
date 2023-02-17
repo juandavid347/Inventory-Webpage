@@ -18860,6 +18860,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/History/Index.cshtml",
+      "TargetPath": "Pages\\History\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/juan/VSC Projects/Inventory/Inventory control webpage/Inventory/Pages/Company/Edit.cshtml",
       "TargetPath": "Pages\\Company\\Edit.cshtml",
       "FileKind": "mvc"
