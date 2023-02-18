@@ -25,7 +25,7 @@ namespace Inventory.Pages.PurchaseOrders
 
       public PurchaseOrder PurchaseOrder { get; set; } = default!;
       public IEnumerable<PurchaseItems> purchaseItems { get; set; } = default!;
-      public CompanyInfo companyInfo { get; set; } = default!;
+      public CompanyInfo CompanyInfo { get; set; } = default!;
       public string filename { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -41,8 +41,8 @@ namespace Inventory.Pages.PurchaseOrders
             var items = await _context.PurchaseItems
                 .Where(i => i.PurchaseID == id.Value)
                 .Include(i => i.Item).ToListAsync();
-            companyInfo = await _context.CompanyInfo.FirstOrDefaultAsync(s => s.ID == 1);
-            if (purchaseorder == null)
+            var companyInfo = await _context.CompanyInfo.FirstOrDefaultAsync(s => s.ID == 1);
+            if (purchaseorder == null || companyInfo == null)
             {
                 return NotFound();
             }
@@ -50,9 +50,10 @@ namespace Inventory.Pages.PurchaseOrders
             {
                 PurchaseOrder = purchaseorder;
                 purchaseItems = items;
+                CompanyInfo = companyInfo;
             }
 
-            filename = PurchaseOrderPdf.CreatePurchaseOrderPdf(PurchaseOrder, purchaseItems, companyInfo);
+            filename = PurchaseOrderPdf.CreatePurchaseOrderPdf(PurchaseOrder, purchaseItems, CompanyInfo);
 
             return Page();
         }

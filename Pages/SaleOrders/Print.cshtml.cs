@@ -25,7 +25,7 @@ namespace Inventory.Pages.SaleOrders
 
       public SaleOrder SaleOrder { get; set; } = default!;
       public IEnumerable<SaleItems> saleItems { get; set; } = default!;
-      public CompanyInfo companyInfo { get; set; } = default!;
+      public CompanyInfo CompanyInfo { get; set; } = default!;
       public string filename { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -41,8 +41,8 @@ namespace Inventory.Pages.SaleOrders
             var items = await _context.SaleItems
                 .Where(i => i.SaleID == id.Value)
                 .Include(i => i.Item).ToListAsync();
-            companyInfo = await _context.CompanyInfo.FirstOrDefaultAsync(s => s.ID == 1);
-            if (saleorder == null)
+            var companyInfo = await _context.CompanyInfo.FirstOrDefaultAsync(s => s.ID == 1);
+            if (saleorder == null || companyInfo == null)
             {
                 return NotFound();
             }
@@ -50,9 +50,10 @@ namespace Inventory.Pages.SaleOrders
             {
                 SaleOrder = saleorder;
                 saleItems = items;
+                CompanyInfo = companyInfo;
             }
 
-            filename = SalesOrderPdf.CreateSalesOrderPdf(SaleOrder, saleItems, companyInfo);
+            filename = SalesOrderPdf.CreateSalesOrderPdf(SaleOrder, saleItems, CompanyInfo);
 
             return Page();
         }
