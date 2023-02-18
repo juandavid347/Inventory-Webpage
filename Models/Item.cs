@@ -1,3 +1,5 @@
+// Class that represents each item and neccessary information
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.Models

@@ -1,3 +1,5 @@
+// Class that represents the customer's information
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.Models

@@ -1,3 +1,6 @@
+// Class that represents the information about one's company
+// Used to create SalesOrders and PurchaseOrders
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.Models

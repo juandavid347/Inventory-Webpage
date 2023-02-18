@@ -1,3 +1,5 @@
+// Class that represents each purchase order and associated vendor and items
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.Models

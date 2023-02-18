@@ -1,3 +1,5 @@
+// Class that represents each sold item and their associated sales order information
+
 using System.ComponentModel.DataAnnotations;
 
 namespace Inventory.Models
