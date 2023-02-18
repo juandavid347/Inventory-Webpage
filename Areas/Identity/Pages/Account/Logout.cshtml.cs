@@ -2,6 +2,8 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
+// Scaffoldede Logout Page Controller
+
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -33,8 +35,6 @@ namespace Inventory.Areas.Identity.Pages.Account
             }
             else
             {
-                // This needs to be a redirect so that the browser performs a new
-                // request and the identity for the user gets updated.
                 return RedirectToPage();
             }
         }
