@@ -8,11 +8,11 @@ namespace Inventory.Pages.SaleOrders
 {
     public class CustomerNamePageModel : PageModel
     {
-        public SelectList CustomerNameSL { get; set; }
-        public SelectList ItemsSL { get; set; }
+        public SelectList? CustomerNameSL { get; set; }
+        public SelectList? ItemsSL { get; set; }
 
         public void PopulateCustomersDropDownList(ApplicationDbContext _context,
-            object selectedCustomer = null)
+            object? selectedCustomer = null)
         {
             var customersQuery = from d in _context.Customer
                                    orderby d.Name // Sort by name.
@@ -23,7 +23,7 @@ namespace Inventory.Pages.SaleOrders
         }
 
         public void PopulateItemsDropDownList(ApplicationDbContext _context,
-            object selectedItem = null)
+            object? selectedItem = null)
         {
             var itemsQuery = from d in _context.Item
                                    orderby d.Name // Sort by name.

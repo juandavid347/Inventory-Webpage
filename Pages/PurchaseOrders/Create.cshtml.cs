@@ -47,7 +47,7 @@ namespace Inventory.Pages.PurchaseOrders
         {
           if (!ModelState.IsValid || _context.PurchaseOrder == null || PurchaseOrder == null)
             {
-                PopulateVendorsDropDownList(_context, PurchaseOrder.VendorID);
+                if (PurchaseOrder != null) PopulateVendorsDropDownList(_context, PurchaseOrder.VendorID);
                 PopulateItemsDropDownList(_context);
                 count = itemsID.Length;
                 purchaseItems = new List<PurchaseItems>();

@@ -8,11 +8,11 @@ namespace Inventory.Pages.PurchaseOrders
 {
     public class VendorNamePageModel : PageModel
     {
-        public SelectList VendorNameSL { get; set; }
-        public SelectList ItemsSL { get; set; }
+        public SelectList? VendorNameSL { get; set; }
+        public SelectList? ItemsSL { get; set; }
 
         public void PopulateVendorsDropDownList(ApplicationDbContext _context,
-            object selectedVendor = null)
+            object? selectedVendor = null)
         {
             var vendorsQuery = from d in _context.Vendor
                                    orderby d.Name // Sort by name.
@@ -23,7 +23,7 @@ namespace Inventory.Pages.PurchaseOrders
         }
 
         public void PopulateItemsDropDownList(ApplicationDbContext _context,
-            object selectedItem = null)
+            object? selectedItem = null)
         {
             var itemsQuery = from d in _context.Item
                                    orderby d.Name // Sort by name.

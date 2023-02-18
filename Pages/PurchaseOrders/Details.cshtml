@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.PurchaseOrder.Vendor)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.PurchaseOrder.Vendor.Name)
+            @Html.DisplayFor(model => model.PurchaseOrder.Vendor != null ? model.PurchaseOrder.Vendor.Name : null)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.PurchaseOrder.Status)
@@ -34,7 +34,7 @@
                 @Html.DisplayNameFor(modelItem => item.Item)
             </dt>
             <dd class="col-sm-10">
-                @Html.DisplayFor(modelItem => item.Item.Name)
+                @Html.DisplayFor(modelItem => item.Item != null ? item.Item.Name : null)
             </dd>
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(modelItem => item.Quantity)

@@ -46,7 +46,7 @@ namespace Inventory.Pages.SaleOrders
         {
           if (!ModelState.IsValid || _context.SaleOrder == null || SaleOrder == null)
             {
-                PopulateCustomersDropDownList(_context, SaleOrder.CustomerID);
+                if (SaleOrder != null) PopulateCustomersDropDownList(_context, SaleOrder.CustomerID);
                 PopulateItemsDropDownList(_context);
                 count = itemsID.Length;
                 saleItems = new List<SaleItems>();

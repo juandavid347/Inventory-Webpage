@@ -32,7 +32,7 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vendor.Name)
+                @Html.DisplayFor(modelItem => item.Vendor != null ? item.Vendor.Name : null)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)

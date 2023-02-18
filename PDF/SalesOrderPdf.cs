@@ -82,10 +82,13 @@ namespace Inventory.PDF
             paragraph.Format.Alignment = ParagraphAlignment.Left;
             paragraph.Format.LineSpacingRule = LineSpacingRule.OnePtFive;
             paragraph.AddText("Bill to:\n");
-            paragraph.AddText("Customer: " + saleOrder.Customer.Name + "\n");
-            paragraph.AddText("Address: " + saleOrder.Customer.Address + "\n");
-            paragraph.AddText("Phone: " + saleOrder.Customer.PhoneNumber + "\n");
-            paragraph.AddText("Email: " + saleOrder.Customer.Email + "");
+            if (saleOrder.Customer != null)
+            {
+                paragraph.AddText("Customer: " + saleOrder.Customer.Name + "\n");
+                paragraph.AddText("Address: " + saleOrder.Customer.Address + "\n");
+                paragraph.AddText("Phone: " + saleOrder.Customer.PhoneNumber + "\n");
+                paragraph.AddText("Email: " + saleOrder.Customer.Email + "");
+            }
         }
 
         public static void CreateTable(Section section, IEnumerable<SaleItems> saleItems)
@@ -114,12 +117,15 @@ namespace Inventory.PDF
                 dataRow.VerticalAlignment = VerticalAlignment.Center;
                 dataRow.Cells[0].AddParagraph((i + 1).ToString()).Style = "TableStyle";
                 var item = saleItems.ElementAt(i);
-                dataRow.Cells[1].AddParagraph(item.Item.Name).Style = "TableStyle";
-                dataRow.Cells[2].AddParagraph(item.Quantity.ToString()).Style = "TableStyle";
-                dataRow.Cells[3].AddParagraph(item.Item.Price.ToString("C2")).Style = "TableStyle";
-                var amount = item.Quantity * item.Item.Price;
-                totalAmount += amount;
-                dataRow.Cells[4].AddParagraph(amount.ToString("C2")).Style = "TableStyle";
+                if (item.Item != null)
+                {
+                    dataRow.Cells[1].AddParagraph(item.Item.Name).Style = "TableStyle";
+                    dataRow.Cells[2].AddParagraph(item.Quantity.ToString()).Style = "TableStyle";
+                    dataRow.Cells[3].AddParagraph(item.Item.Price.ToString("C2")).Style = "TableStyle";
+                    var amount = item.Quantity * item.Item.Price;
+                    totalAmount += amount;
+                    dataRow.Cells[4].AddParagraph(amount.ToString("C2")).Style = "TableStyle";
+                }
             }
             var lastCell = table.AddRow();
             lastCell.Height = "0.675 cm";
