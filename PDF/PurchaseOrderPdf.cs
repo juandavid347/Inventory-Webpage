@@ -1,3 +1,5 @@
+// Create a Pdf Document given the specified purchase order information
+
 using MigraDocCore.DocumentObjectModel;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
@@ -7,6 +9,7 @@ namespace Inventory.PDF
 {
     public class PurchaseOrderPdf
     {
+        // Create Pdf Document and return a unique filename
         public static string CreatePurchaseOrderPdf(PurchaseOrder purchaseOrder, 
             IEnumerable<PurchaseItems> purchaseItems, CompanyInfo companyInfo)
         {
@@ -17,15 +20,16 @@ namespace Inventory.PDF
             
             AddTitle(section);
             AddDateandSO(section, purchaseOrder);
-            AddCustomerInfo(section, purchaseOrder);
+            AddVendorInfo(section, purchaseOrder);
             CreateTable(section, purchaseItems);
-            AddVendorInfo(section, companyInfo);
+            AddCustomerInfo(section, companyInfo);
 
             var filename = RenderToPdf(document);
 
             return filename;
         }
 
+        // Set the document information
         public static Document CreateDocument()
         {
             var document = new Document();
@@ -37,6 +41,7 @@ namespace Inventory.PDF
             return document;
         }
 
+        // Easy the document creation using customized styles
         public static void DefineStyles(Document document)
         {
             var style = document.Styles["Normal"];
@@ -74,7 +79,7 @@ namespace Inventory.PDF
             paragraph.AddText("PO No: " + purchaseOrder.PurchaseID.ToString() + "\t\t\n");
         }
 
-        public static void AddCustomerInfo(Section section, PurchaseOrder purchaseOrder)
+        public static void AddVendorInfo(Section section, PurchaseOrder purchaseOrder)
         {
             var paragraph = section.AddParagraph();
             paragraph.Format.Font.Size = 12;
@@ -135,7 +140,7 @@ namespace Inventory.PDF
             lastCell.Cells[4].AddParagraph(totalAmount.ToString("C2")).Style = "TableStyle";
         }
 
-        public static void AddVendorInfo(Section section, CompanyInfo companyInfo)
+        public static void AddCustomerInfo(Section section, CompanyInfo companyInfo)
         {
             var paragraph = section.AddParagraph();
             paragraph.Format.Font.Size = 12;
@@ -149,6 +154,7 @@ namespace Inventory.PDF
             paragraph.AddText("Email: " + companyInfo.Email + "");
         }
 
+        // Render document and create unique filename based on current date and time
         public static string RenderToPdf(Document document)
         {
             var pdfRenderer = new PdfDocumentRenderer(false);

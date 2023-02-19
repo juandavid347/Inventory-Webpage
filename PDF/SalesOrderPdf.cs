@@ -1,4 +1,6 @@
-﻿using MigraDocCore.DocumentObjectModel;
+﻿// Create a Pdf Document given the specified sale order information
+
+using MigraDocCore.DocumentObjectModel;
 using MigraDocCore.DocumentObjectModel.Tables;
 using MigraDocCore.Rendering;
 using Inventory.Models;
@@ -7,6 +9,7 @@ namespace Inventory.PDF
 {
     public class SalesOrderPdf
     {
+        // Create Pdf Document and return a unique filename
         public static string CreateSalesOrderPdf(SaleOrder saleOrder, 
             IEnumerable<SaleItems> saleItems, CompanyInfo companyInfo)
         {
@@ -26,6 +29,7 @@ namespace Inventory.PDF
             return filename;
         }
 
+        // Set the document information
         public static Document CreateDocument()
         {
             var document = new Document();
@@ -37,6 +41,7 @@ namespace Inventory.PDF
             return document;
         }
 
+        // Easy the document creation using customized styles
         public static void DefineStyles(Document document)
         {
             var style = document.Styles["Normal"];
@@ -149,6 +154,7 @@ namespace Inventory.PDF
             paragraph.AddText("Email: " + companyInfo.Email + "");
         }
 
+        // Render document and create unique filename based on current date and time
         public static string RenderToPdf(Document document)
         {
             var pdfRenderer = new PdfDocumentRenderer(false);
