@@ -1,3 +1,5 @@
+// Create New Vendor Page Controller
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +32,6 @@ namespace Inventory.Pages.Vendors
         public Vendor Vendor { get; set; } = default!;
         
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
           if (!ModelState.IsValid || _context.Vendor == null || Vendor == null)

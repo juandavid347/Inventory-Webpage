@@ -1,3 +1,5 @@
+// Print Sale Order Page Controller
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -53,6 +55,7 @@ namespace Inventory.Pages.SaleOrders
                 CompanyInfo = companyInfo;
             }
 
+            // Each Sale Order Pdf File requires your company information besides the sale order details
             filename = SalesOrderPdf.CreateSalesOrderPdf(SaleOrder, saleItems, CompanyInfo);
 
             return Page();

@@ -1,3 +1,5 @@
+// Create New Purchase Order Page Controller
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +23,7 @@ namespace Inventory.Pages.PurchaseOrders
             _context = context;
         }
 
+        // Takes into account the number of items required for the user
         public IActionResult OnGet(int itemsCount)
         {
         PopulateVendorsDropDownList(_context);
@@ -42,7 +45,6 @@ namespace Inventory.Pages.PurchaseOrders
         public  int count { get; set; } = default;
         
 
-        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync(int [] itemsID, uint[] itemsQuantity)
         {
           if (!ModelState.IsValid || _context.PurchaseOrder == null || PurchaseOrder == null)

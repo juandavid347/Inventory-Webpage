@@ -1,3 +1,5 @@
+// Print Purchase Order Page Controller
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -53,6 +55,7 @@ namespace Inventory.Pages.PurchaseOrders
                 CompanyInfo = companyInfo;
             }
 
+            // Each Purchase Order Pdf File requires your company information besides the purchase order details
             filename = PurchaseOrderPdf.CreatePurchaseOrderPdf(PurchaseOrder, purchaseItems, CompanyInfo);
 
             return Page();

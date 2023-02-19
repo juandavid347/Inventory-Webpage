@@ -1,3 +1,5 @@
+// Sale Orders Index Page Controller
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +34,7 @@ namespace Inventory.Pages.SaleOrders
                 .Include(s => s.Customer).ToListAsync();
             }
 
+            // To avoid cluttering with pdf files, erase the existing ones
             foreach (string file in Directory.EnumerateFiles("wwwroot", "*.pdf"))
             {
                 var fileInfo = new FileInfo(file);

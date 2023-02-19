@@ -1,6 +1,8 @@
 @page
 @model Inventory.Pages.PurchaseOrders.CreateModel
 
+<!-- Create New Purchase Order Page -->
+
 @{
     ViewData["Title"] = "Create";
 }
@@ -23,9 +25,13 @@
                 <input type="datetime-local" asp-for="PurchaseOrder.Date" class="form-control" />
                 <span asp-validation-for="PurchaseOrder.Date" class="text-danger"></span>
             </div>
+
+            <!-- For each new item added redirectes to a new page -->
+
             <div class="form-group">
                 <a asp-page="./Create" asp-route-itemsCount="@Model.count">Add Item</a>
             </div>
+            
             @foreach (var item in Model.purchaseItems)
             {
                 <div class="form-group">

@@ -1,3 +1,5 @@
+// Edit Sale Order Page Controller
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,8 +52,6 @@ namespace Inventory.Pages.SaleOrders
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
@@ -63,6 +63,7 @@ namespace Inventory.Pages.SaleOrders
             
             _context.Attach(SaleOrder).State = EntityState.Modified;
 
+            // Update items one by one
             var salesToUpdate = await _context.SaleItems
                 .Include(i => i.Item)
                 .Where(i => i.SaleID == id).ToListAsync();
@@ -72,12 +73,16 @@ namespace Inventory.Pages.SaleOrders
                 salesToUpdate[i].ItemID = saleItems[i].ItemID;
                 salesToUpdate[i].Quantity = saleItems[i].Quantity;
                 _context.Attach(salesToUpdate[i]).State = EntityState.Modified;
+
+                // Once completed, each item is added to the stock
                 if (SaleOrder.Status == Status.Completed)
                 {
                     foreach (var item in itemsToUpdate)
                     {
                         if (saleItems[i].ItemID == item.ItemID)
                         {
+
+                            // Check if there's enough items available
                             if (item.Quantity < saleItems[i].Quantity)
                             {
                                 PopulateCustomersDropDownList(_context, SaleOrder.CustomerID);

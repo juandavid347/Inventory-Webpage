@@ -1,3 +1,5 @@
+// Edit Purchase Order Page Controller
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,8 +51,6 @@ namespace Inventory.Pages.PurchaseOrders
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
@@ -60,6 +60,7 @@ namespace Inventory.Pages.PurchaseOrders
 
             _context.Attach(PurchaseOrder).State = EntityState.Modified;
 
+            // Update items one by one
             var purchasesToUpdate = await _context.PurchaseItems
                 .Include(i => i.Item)
                 .Where(i => i.PurchaseID == id).ToListAsync();
@@ -69,6 +70,8 @@ namespace Inventory.Pages.PurchaseOrders
                 purchasesToUpdate[i].ItemID = purchaseItems[i].ItemID;
                 purchasesToUpdate[i].Quantity = purchaseItems[i].Quantity;
                 _context.Attach(purchasesToUpdate[i]).State = EntityState.Modified;
+
+                // Once completed, each item is added to the stock
                 if (PurchaseOrder.Status == Status.Completed)
                 {
                     foreach (var item in itemsToUpdate)

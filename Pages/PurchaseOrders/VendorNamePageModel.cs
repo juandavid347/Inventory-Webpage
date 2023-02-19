@@ -1,3 +1,5 @@
+// Page Model Class used to present vendor and items information in SelectList format
+
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;

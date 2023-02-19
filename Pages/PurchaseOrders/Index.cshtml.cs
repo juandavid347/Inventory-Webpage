@@ -1,3 +1,5 @@
+// Purchase Orders Index Page Controller
+
 using System;
 using System.IO;
 using System.Collections.Generic;
@@ -33,6 +35,7 @@ namespace Inventory.Pages.PurchaseOrders
                 .Include(p => p.Vendor).ToListAsync();
             }
 
+            // To avoid cluttering with pdf files, erase the existing ones
             foreach (string file in Directory.EnumerateFiles("wwwroot", "*.pdf"))
             {
                 var fileInfo = new FileInfo(file);
