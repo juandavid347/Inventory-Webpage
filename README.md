@@ -3,7 +3,7 @@
 ### Vide Demo: <URL>
 ### Description:
 
-Inventory Control WebApp developed in C# using .NET 7 in Linux Mint using Visual Studio Code. Based on an ASP .NET Core WebApp with Individual Authentication and using SQLite Database with Entity Framework Core, Razor Pages, and MigraDocCore for Pdf output.
+Inventory Control WebApp developed in C# using .NET 7 in Linux Mint using Visual Studio Code. Based on an ASP .NET Core WebApp with Individual Authentication and using SQLite Database with Entity Framework Core, Razor Pages, and MigraDocCore for Pdf output. This web application allows the user to access an inventory control system using a username and password, then allows the user to enter information like items, customers, vendors, and sales or purchases orders; each one of this entries can be edited, viewed in details or deleted, according to the user's needs. A history page shows any order that has already been completed, and a company page lets the user set their company information in order to allows the system to output pdf orders.
 
 #### Web application:
 
