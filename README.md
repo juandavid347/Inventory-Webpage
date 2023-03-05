@@ -15,7 +15,7 @@ As stated before, Sqlite is used and configured using Entity Framework Core. The
 
 After creating the models classes, we scaffolded the pages and associated controllers using the `dotnet aspnet-codegenerator` command, the we used Entity Framework to drop the database, add the necessary migrations and rebuild the database. In the *Data* folder, the *ApplicationDbContext* class contains the definition of each scaffolded models class. We only scaffolded the item, customer, vendor, purchaseorder, salesorders and companyinfo classes. Therefore, we modified the *ApplicationDbContext* class to allow the many to many relationships between the purchaseorder and saleorders classes and the corresponding item and customer or vendor classes using the purchaseitems and saleitems classes. This allows us to relate a given purchase or sale order with a corresponding vendor or customer and as many items as necessary.
 
-#### Pages and Controllers
+#### Pages and Controllers:
 
 In the *Pages* folder, we found the corresponding pages (cshtml files) and controllers (cshtml.cs files) as well as the corresponding templates and imports files. We modified the index and template files to fit our application. Then after scaffolding the model classes we proceeded to modify the pages and controllers to fit our application requirements. Each scaffolded model class has a folder in *Pages* containing five different options: index, create, edit, details, and delete. We modified these files as necessary. In the *Items*, *Customers* and *Vendors* folders, we did not modify any files because they were already accomplishig the necessary requirements.
 
@@ -29,6 +29,6 @@ The *History* folder was added with only the index page available to provide a v
 
 Once we ended modifying all controllers we added the `[Authorize]` statement to each one of them to ensure only signed users can access the corresponding pages.
 
-#### Pdf Output
+#### Pdf Output:
 
 Once added and referenced the MigraDocCore packages, the *PurchaseOrderPdf* and *SalesOrderPdf* classes were added in the *PDF* folder. These create a new pdf document with a unique filename, and the addecuated format for the corresponding order. The documentation and examples given by the developers of MigraDocCore were used to set the style and format of the document and to add all the information provided by the database in the form of a table.
