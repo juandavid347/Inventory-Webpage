@@ -30,7 +30,7 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Customer != null ? item.Customer.Name : "")
+                @Html.DisplayFor(modelItem => item.Customer.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
@@ -63,7 +63,7 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vendor != null ? item.Vendor.Name : "")
+                @Html.DisplayFor(modelItem => item.Vendor.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
